@@ -1,6 +1,6 @@
 public class Planet {
 
-    static final double GRAVITATIONAL_CONSTANT = 6.67e-11;
+    private static final double GRAVITATIONAL_CONSTANT = 6.67e-11;
 
     public double xxPos;
     public double yyPos;
