@@ -97,6 +97,5 @@ public class Planet {
         // 3.calculate the new position
         this.xxPos = this.xxPos + dt * this.xxVel;
         this.yyPos = this.yyPos + dt * this.yyVel;
-
     }
 }
