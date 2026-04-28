@@ -13,7 +13,7 @@ public class ArrayDeque<T> {
         items = (T[]) new Object[ARRAY_SIZE];
         size = 0;
         front = 0;
-        rear = 1;
+        rear = 0;
         arrayLength = ARRAY_SIZE;
     }
 
@@ -55,7 +55,6 @@ public class ArrayDeque<T> {
         if (size + 1 == arrayLength) {
             resize(arrayLength * 2);
         }
-
         items[rear] = item;
         rear = plusOne(rear);
         size++;
