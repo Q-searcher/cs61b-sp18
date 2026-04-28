@@ -78,6 +78,9 @@ public class ArrayDeque<T> {
     }
 
     public T removeFirst() {
+        if (size == 0) {
+            return null;
+        }
         T tempValue = items[front];
         front = plusOne(front);
         size--;
@@ -90,12 +93,18 @@ public class ArrayDeque<T> {
     }
 
     public T removeLast() {
+        if (size == 0) {
+            return null;
+        }
+
+        rear = minusOne(rear);
+        size--;
+        T tempValue = items[rear];
+
         if ((size + 1) <= (arrayLength / 4)) {
             resize(arrayLength / 2);
         }
-        rear = minusOne(rear);
-        size--;
-        return items[rear];
+        return tempValue;
     }
 
     public T get(int index) {

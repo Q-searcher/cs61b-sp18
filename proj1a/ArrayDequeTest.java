@@ -65,6 +65,11 @@ public class ArrayDequeTest {
         System.out.println("Printing out deque: ");
         ad.printDeque();
 
+        ad.removeFirst();
+        ad.removeFirst();
+        ad.removeFirst();
+        ad.removeFirst();
+        passed = checkSize(0, ad.size()) && passed;
         printTestStatus(passed);
     }
 
@@ -80,13 +85,13 @@ public class ArrayDequeTest {
         System.out.println("Printing out deque: ");
         ad.printDeque();
 
-        for (int i = 0; i < 11; i++) {
-            ad.removeFirst();
+        for (int i = 0; i < 15; i++) {
+            ad.removeLast();
         }
         System.out.println("Printing out deque: ");
         ad.printDeque();
 
-        passed = checkSize(2, ad.size()) && passed;
+        passed = checkSize(0, ad.size()) && passed;
 
 
         printTestStatus(passed);
