@@ -6,7 +6,7 @@ public class ArrayDeque<T> {
     private int rear;
     private int arrayLength;
 
-    public static final int ARRAY_SIZE = 8;
+    private static final int ARRAY_SIZE = 8;
 
     // 构造函数
     public ArrayDeque() {
@@ -30,13 +30,13 @@ public class ArrayDeque<T> {
     private void resize(int capacity) {
         T[] newItems = (T[]) new Object[capacity];
 
-        int index = plusOne(front);
+        int index = front;
         for (int i = 0; i < size; i++) {
             newItems[i] = items[(index + i) % arrayLength];
         }
         items = newItems;
         arrayLength = capacity;
-        front = arrayLength - 1;
+        front = 0;
         rear = size;
 
     }

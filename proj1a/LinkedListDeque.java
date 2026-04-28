@@ -84,8 +84,8 @@ public class LinkedListDeque<T> {
         } else {
             LinkedListNode tempNode = sentinel.prev;
 
-            sentinel.prev= tempNode.prev;
-            tempNode.prev.next= sentinel;
+            sentinel.prev = tempNode.prev;
+            tempNode.prev.next = sentinel;
 
             size--;
             return tempNode.item;
