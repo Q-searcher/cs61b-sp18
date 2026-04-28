@@ -78,14 +78,14 @@ public class ArrayDeque<T> {
     }
 
     public T removeFirst() {
-
-        if ((size + 1) <= (arrayLength / 4)) {
-            resize(arrayLength / 2);
-        }
-
         T tempValue = items[front];
         front = plusOne(front);
         size--;
+
+        if ((size) < (arrayLength / 4)) {
+            resize(arrayLength / 2);
+        }
+
         return tempValue;
     }
 
