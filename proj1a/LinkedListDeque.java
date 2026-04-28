@@ -1,5 +1,3 @@
-import sun.awt.image.ImageWatched;
-
 public class LinkedListDeque<T> {
     /* 首先定义链表的结构
      */
@@ -8,7 +6,7 @@ public class LinkedListDeque<T> {
         LinkedListNode prev;
         LinkedListNode next;
 
-        LinkedListNode (T item, LinkedListNode prev, LinkedListNode next) {
+        LinkedListNode(T item, LinkedListNode prev, LinkedListNode next) {
             this.item = item;
             this.prev = prev;
             this.next = next;
@@ -68,14 +66,13 @@ public class LinkedListDeque<T> {
         // check whether the Deque is null
         if (size == 0) {
             return null;
-        }
-        else {
+        } else {
             LinkedListNode tempNode = sentinel.next;
 
             sentinel.next = tempNode.next;
             tempNode.next.prev = sentinel;
 
-            size --;
+            size--;
             return tempNode.item;
         }
     }
@@ -84,8 +81,7 @@ public class LinkedListDeque<T> {
         // check whether the Deque is null
         if (size == 0) {
             return null;
-        }
-        else {
+        } else {
             LinkedListNode tempNode = sentinel.prev;
 
             sentinel.prev= tempNode.prev;
