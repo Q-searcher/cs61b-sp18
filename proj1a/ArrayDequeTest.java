@@ -25,7 +25,7 @@ public class ArrayDequeTest {
 
 
     // below are some test for ArrayDeque
-    public static void ArrayDequeAddRemoveTest() {
+    public static void arrayDequeAddRemoveTest() {
         System.out.println("Running ArrayDeque test for add and remove");
 
         ArrayDeque<Integer> ad = new ArrayDeque<Integer>();
@@ -94,7 +94,7 @@ public class ArrayDequeTest {
 
     public static void main(String[] args) {
         System.out.println("Running test.\n");
-        ArrayDequeAddRemoveTest();
+        arrayDequeAddRemoveTest();
         addIsEmptySizeTest();
         resizeTest();
     }
