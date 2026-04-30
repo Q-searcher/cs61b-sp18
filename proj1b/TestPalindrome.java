@@ -25,5 +25,12 @@ public class TestPalindrome {
         assertFalse(palindrome.isPalindrome("cat"));
         assertFalse(palindrome.isPalindrome("3452435"));
         assertFalse(palindrome.isPalindrome("a%&^^^*$^R^%$"));
+
+        assertFalse(palindrome.isPalindrome("abcca"));
+
+        OffByN cc = new OffByN(4);
+        assertTrue(palindrome.isPalindrome("wages", cc));
+
+        assertTrue(palindrome.isPalindrome("121"));
     }
 }

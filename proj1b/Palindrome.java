@@ -10,7 +10,8 @@ public class Palindrome {
 
         return newDeque;
     }
-    // The isPalindrome method should return true if the given word is a palindrome, and false otherwise.
+    // The isPalindrome method should return true if the given
+    // word is a palindrome, and false otherwise.
     public boolean isPalindrome(String word) {
         Deque<Character> wordDeque = wordToDeque(word);
 
@@ -23,7 +24,10 @@ public class Palindrome {
         return isPalindromeHelper(wordDeque, cc);
     }
 
-    private boolean isPalindromeHelper(Deque<Character> wordDeque, CharacterComparator cc) {
+    private boolean isPalindromeHelper(
+            Deque<Character> wordDeque,
+            CharacterComparator cc) {
+
         int size = wordDeque.size();
 
         if (size == 0 || size == 1) {
